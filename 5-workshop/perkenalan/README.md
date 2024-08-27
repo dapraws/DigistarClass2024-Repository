@@ -7,7 +7,7 @@ Package ini menyediakan fungsi sederhana untuk memperkenalkan diri dengan nama, 
 Anda dapat menginstal paket ini melalui npm:
 
 ```bash
-npm install <perkenalan>
+npm install perkenalan
 ```
 
 ## Penggunaan
@@ -15,7 +15,7 @@ npm install <perkenalan>
 Berikut adalah cara menggunakan fungsi `perkenalan`:
 
 ```javascript
-const perkenalan = require("<perkenalan>");
+const perkenalan = require("perkenalan");
 
 const nama = "Darrel";
 const asal = "Jakarta";
