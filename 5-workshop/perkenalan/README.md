@@ -21,8 +21,8 @@ const nama = "Darrel";
 const asal = "Jakarta";
 const hobi = "coding";
 
-const perkenalan = perkenalan(nama, asal, hobi);
-console.log(perkenalan);
+const kenalkan = perkenalan(nama, asal, hobi);
+console.log(kenalkan);
 // Output: Halo, namaku Darrel dari Jakarta, dan hobiku coding. Salam kenal!
 ```
 
