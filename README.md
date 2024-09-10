@@ -121,3 +121,5 @@ app.post('/login', (req, res) => {
 
 - **Registrasi**: Menggunakan `POST /register` untuk menambahkan user baru.
 - **Login**: Menggunakan `POST /login` untuk memverifikasi kredensial user dan mengembalikan JWT jika berhasil.
+***
+#DigistarClass #DigistarClass2024 #LivinginTelkom #TelkomIndonesia #BackEnd #LearningSession
