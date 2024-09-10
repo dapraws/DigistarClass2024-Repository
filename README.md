@@ -35,4 +35,7 @@ Sesi hands-on ini bener-bener ngebantu aku buat ngelatih skill coding dan ngapli
 Gak sabar buat proyek-proyek selanjutnya dan ngembangin apa yang udah dipelajarin! 🚀
 
 
+
+
+
 #DigistarClass #DigistarClass2024 #LivinginTelkom #TelkomIndonesia #BackEnd #LearningSession
