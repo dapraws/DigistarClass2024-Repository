@@ -1,3 +1,4 @@
+![Day 2 - HTTP Server](https://github.com/user-attachments/assets/7494c0ee-a455-4682-ba46-9d6a48040a7a)
 # HTTP : Introducing
 
 HTTP, or Hypertext Transfer Protocol, is the foundation of any data exchange on the Web. It is an application layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes.
