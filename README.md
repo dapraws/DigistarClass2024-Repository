@@ -1,59 +1,65 @@
+# HTTP Server
+
 ![Day 2 - HTTP Server](https://github.com/user-attachments/assets/7494c0ee-a455-4682-ba46-9d6a48040a7a)
-# HTTP : Introducing
 
-HTTP, or Hypertext Transfer Protocol, is the foundation of any data exchange on the Web. It is an application layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes.
+Di sesi pembelajaran ini, kita akan bahas **HTTP Server** dan cara membuatnya menggunakan **Node.js**.
 
-## How HTTP Works:
+## Apa itu HTTP Server?
+HTTP Server adalah server yang berfungsi untuk **menerima** dan **memproses** permintaan dari **client** (browser) melalui protokol HTTP. HTTP Server adalah komponen penting dalam pengembangan web karena memungkinkan komunikasi antara client dan server.
 
-### 1. Client-Server Model:
+## Peran dan Fungsi HTTP Server
+- **Menerima HTTP Request**: Server menerima permintaan dari client seperti GET, POST, PUT, DELETE, dll.
+- **Mengolah Data**: Server dapat memproses data yang dikirim oleh client (misalnya dari form).
+- **Mengirim Response**: Setelah memproses request, server mengirimkan respons seperti halaman HTML, data JSON, atau file lainnya.
 
-- **Client**: Typically a web browser, but it can be any other client that can make HTTP requests (e.g., a mobile app, a command-line tool)
-- **Server**: Hosts the website or the web application and serves HTTP responses to clients.
+## Metode HTTP Request
+- **GET**: Meminta data dari server.
+- **POST**: Mengirim data ke server.
+- **PUT**: Mengupdate data di server.
+- **DELETE**: Menghapus data dari server.
 
-### 2. HTTP Request:
+## Parsing URL dan Headers
+Ketika client mengirim request, URL dan headers juga dikirim ke server. Kita bisa **parsing URL** untuk mengambil informasi penting, seperti path atau query parameters, dan **memproses headers** untuk melihat informasi tambahan seperti jenis konten yang dikirim.
 
-- **Method**: The action to be performed, such as GET (retrieve data), POST (send data to the server), PUT (update data), DELETE (remove data), etc.
-- **URL**: The address of the resource.
-- **Headers**: Additional information sent with the request, such as content type, user-agent, authorization, etc.
-- **Body**: Optional data sent with the request, usually with POST or PUT requests.
+## Cara Kerja HTTP Server di Node.js
+Dengan **Node.js**, kita bisa membuat server HTTP sederhana dengan menggunakan modul `http`. Berikut contoh singkat cara membuat HTTP server:
 
-### 2. HTTP Response:
+```
+const http = require('http');
 
-- **Status Code**: Indicates the result of the HTTP request. Common status codes include 200 (OK), 404 (Not Found), 500 (Internal Server Error).
-- **Headers**: Additional information sent back by the server, such as content type, content length, etc.
-- **Body**: Additional information sent back by the server, such as content type, content length, etc.
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, World!\n');
+});
 
-## The HTTP Process:
+server.listen(3000, () => {
+  console.log('Server running at http://localhost:3000/');
+});
+```
 
-### 1. Establishing a Connection:
+Server di atas akan menampilkan **"Hello, World!"** setiap kali ada request ke `localhost:3000`.
 
-- The client establishes a TCP connection to the server.
-- The default port for HTTP is 80, and for HTTPS (secure HTTP), it is 443.
+## Routing
+Routing adalah proses menentukan apa yang harus dilakukan server ketika menerima request ke path tertentu. Misalnya:
 
-### 2. Sending an HTTP Request:
+```
+const server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end('<h1>Selamat Datang</h1>');
+  } else if (req.url === '/greet') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end('<h1>Halo Darrel</h1>');
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/html' });
+    res.end('<h1>Page Not Found</h1>');
+  }
+});
+```
 
-- The client sends an HTTP request message to the server.
-
-### 3. Processing the Request:
-
-- The server processes the request, finds the requested resource, and prepares an HTTP response.
-
-### 4. Sending an HTTP Response:
-
-- The server sends an HTTP response message back to the client.
-
-### 5. Closing the Connection:
-
-- The server can close the connection after sending the response, or it can keep it open for further requests (using HTTP keep-alive).
-
-## Key Features:
-
-- **Stateless**: Each HTTP request is independent and does not require the server to retain information about previous requests.
-- **Extensible**: New methods, headers, and status codes can be added to support new requirements.
-- **Human-Readable**:: HTTP messages are plain text and can be easily read and constructed by developers.
-
-## Secure HTTP (HTTPS):
-
-- **HTTPS**: HTTP Secure uses Transport Layer Security (TLS) to encrypt data between the client and the server.
-- **Encryption**: Protects data from being intercepted and read by unauthorized parties.
-- **Authentication**:: Verifies the identity of the server to the client, ensuring that the client is communicating with the intended server.
+## Respon Status
+Setiap kali server merespons request, server akan mengirim **status code** seperti:
+- **200**: OK (Berhasil).
+- **404**: Not Found (Halaman tidak ditemukan).
+- **500**: Internal Server Error (Kesalahan di server).
