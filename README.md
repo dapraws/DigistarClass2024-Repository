@@ -16,7 +16,7 @@ NPM adalah pengelola paket untuk JavaScript. Ibaratnya, NPM ini seperti toko apl
 Untuk mulai pakai NPM, pastikan sudah instal **Node.js**, karena NPM otomatis ikut saat instal Node.js. 
 
 Setelah itu, kamu bisa buka terminal atau command prompt, cek versi NPM dengan perintah:
-```
+```bash
 npm -v
 ```
 ## Perintah Dasar NPM
