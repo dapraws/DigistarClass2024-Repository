@@ -24,3 +24,5 @@ npm -v
 - `npm install <nama_paket>`: Instal paket ke proyek kita.
 - `npm uninstall <nama_paket>`: Hapus paket dari proyek.
 - `npm update`: Update semua paket yang dipakai.
+***
+#DigistarClass #DigistarClass2024 #LivinginTelkom #TelkomIndonesia #BackEnd #LearningSession
