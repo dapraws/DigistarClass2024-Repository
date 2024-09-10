@@ -23,14 +23,8 @@ Dalam database NoSQL seperti MongoDB, seringkali kita menggunakan **denormalisas
 **MongoDB** adalah database NoSQL yang fleksibel, dirancang untuk menyimpan data dalam format **dokumen** (document-oriented). Cocok untuk data yang semi-terstruktur atau tidak terstruktur, MongoDB menggunakan **BSON** (Binary JSON) untuk menyimpan data. Berikut adalah beberapa konsep utama dan penggunaannya dalam MongoDB:
 
 ### Instalasi MongoDB
-Untuk menginstal MongoDB, gunakan perintah berikut (untuk sistem berbasis Linux atau MacOS):
-```bash
-sudo apt install mongodb
-```
-Untuk memulai server MongoDB:
-```bash
-sudo systemctl start mongodb
-```
+Untuk menginstal MongoDB, kita bisa mengikuti tutorial yang sudah disediakan di web MongoDB:
+[Link instalasi MongoDB](https://www.mongodb.com/docs/manual/installation/)
 
 ### Menghubungkan ke MongoDB dengan Node.js
 Kita bisa menggunakan **Mongoose**, yaitu library ODM (Object Data Modeling) untuk MongoDB yang menyediakan skema berbasis data untuk aplikasi Node.js.
@@ -142,7 +136,7 @@ MongoDB, meskipun database NoSQL, mendukung **ACID** pada level dokumen, sehingg
 **Denormalisasi** adalah teknik di mana kita menyimpan data yang sama di beberapa tempat untuk menghindari penggabungan (join) data dari tabel atau koleksi yang berbeda. Di MongoDB, denormalisasi sering digunakan untuk mempercepat pembacaan data karena query dengan data terdenormalisasi lebih cepat daripada query dengan data yang terhubung antar koleksi.
 
 ### Contoh Denormalisasi
-Alih-alih menyimpan ID user di koleksi postingan dan melakukan query terpisah untuk mendapatkan informasi user, kita bisa langsung menyimpan informasi user di dalam dokumen postingan:
+Daripada menyimpan ID user di koleksi postingan dan melakukan query terpisah untuk mendapatkan informasi user, kita bisa langsung menyimpan informasi user di dalam dokumen postingan:
 
 ```json
 {
