@@ -2,7 +2,7 @@
 
 ![Day 2 - HTTP Server](https://github.com/user-attachments/assets/7494c0ee-a455-4682-ba46-9d6a48040a7a)
 
-Di sesi pembelajaran ini, kita akan bahas **HTTP Server** dan cara membuatnya menggunakan **Node.js**.
+Di learning session ini, kita membahas **HTTP Server** dan cara membuatnya menggunakan **Node.js**.
 
 ## Apa itu HTTP Server?
 HTTP Server adalah server yang berfungsi untuk **menerima** dan **memproses** permintaan dari **client** (browser) melalui protokol HTTP. HTTP Server adalah komponen penting dalam pengembangan web karena memungkinkan komunikasi antara client dan server.
