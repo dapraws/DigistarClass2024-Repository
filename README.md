@@ -33,9 +33,5 @@ Hai teman-teman! Aku mau share nih tentang pengalaman hands-on kita di learning 
 Sesi hands-on ini bener-bener ngebantu aku buat ngelatih skill coding dan ngaplikasiin teori yang udah dipelajarin. Sesi ini full praktek bikin aku lebih ngerti alur pembuatan aplikasi di backend, mulai dari server, database, sampe autentikasi.
 
 Gak sabar buat proyek-proyek selanjutnya dan ngembangin apa yang udah dipelajarin! 🚀
-
-
-
-
-
+***
 #DigistarClass #DigistarClass2024 #LivinginTelkom #TelkomIndonesia #BackEnd #LearningSession
