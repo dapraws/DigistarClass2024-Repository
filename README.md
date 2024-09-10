@@ -24,7 +24,7 @@ Ketika client mengirim request, URL dan headers juga dikirim ke server. Kita bis
 ## Cara Kerja HTTP Server di Node.js
 Dengan **Node.js**, kita bisa membuat server HTTP sederhana dengan menggunakan modul `http`. Berikut contoh singkat cara membuat HTTP server:
 
-```
+```javascript
 const http = require('http');
 
 const server = http.createServer((req, res) => {
@@ -43,7 +43,7 @@ Server di atas akan menampilkan **"Hello, World!"** setiap kali ada request ke `
 ## Routing
 Routing adalah proses menentukan apa yang harus dilakukan server ketika menerima request ke path tertentu. Misalnya:
 
-```
+```javascript
 const server = http.createServer((req, res) => {
   if (req.url === '/') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
