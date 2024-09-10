@@ -152,3 +152,5 @@ Daripada menyimpan ID user di koleksi postingan dan melakukan query terpisah unt
 ### Kelebihan Denormalisasi
 - **Kecepatan akses**: Menghindari multiple query atau join antar tabel.
 - **Skalabilitas**: Cocok untuk aplikasi dengan banyak data yang tidak terstruktur.
+***
+#DigistarClass #DigistarClass2024 #LivinginTelkom #TelkomIndonesia #BackEnd #LearningSession
