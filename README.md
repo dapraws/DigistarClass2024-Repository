@@ -80,3 +80,5 @@ app.delete('/users/:id', (req, res) => {
   res.send(`Delete user with ID: ${req.params.id}`);
 });
 ```
+***
+#DigistarClass #DigistarClass2024 #LivinginTelkom #TelkomIndonesia #BackEnd #LearningSession
