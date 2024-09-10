@@ -1,0 +1,96 @@
+{
+  "info": {
+      "_postman_id": "YOUR_UNIQUE_ID",
+      "name": "Express API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+      {
+          "name": "Login",
+          "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"example@example.com\",\n    \"password\": \"password\"\n}"
+              },
+              "url": {
+                  "raw": "http://localhost:7000/digistar/login",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "7000",
+                  "path": [
+                      "digistar",
+                      "login"
+                  ]
+              }
+          },
+          "response": []
+      },
+      {
+          "name": "Register",
+          "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"username\": \"newuser\",\n    \"email\": \"newuser@example.com\",\n    \"password\": \"password\"\n}"
+              },
+              "url": {
+                  "raw": "http://localhost:7000/digistar/register",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "7000",
+                  "path": [
+                      "digistar",
+                      "register"
+                  ]
+              }
+          },
+          "response": []
+      },
+      {
+          "name": "Get All Users",
+          "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                  "raw": "http://localhost:7000/digistar",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "7000",
+                  "path": [
+                      "digistar"
+                  ]
+              }
+          },
+          "response": []
+      },
+      {
+          "name": "Get User by ID",
+          "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                  "raw": "http://localhost:7000/digistar/{userId}",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "7000",
+                  "path": [
+                      "digistar",
+                      "{userId}"
+                  ]
+              }
+          },
+          "response": []
+      }
+  ]
+}
