@@ -57,11 +57,12 @@ const server = http.createServer((req, res) => {
   }
 });
 ```
-***
-#DigistarClass #DigistarClass2024 #LivinginTelkom #TelkomIndonesia #BackEnd #LearningSession
 
 ## Respon Status
 Setiap kali server merespons request, server akan mengirim **status code** seperti:
 - **200**: OK (Berhasil).
 - **404**: Not Found (Halaman tidak ditemukan).
 - **500**: Internal Server Error (Kesalahan di server).
+
+***
+#DigistarClass #DigistarClass2024 #LivinginTelkom #TelkomIndonesia #BackEnd #LearningSession
